@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/* Color Settings */
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Map Settings */
+.map-container {
+  height: auto;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 0;
+}
+.map-container .intro {
+  color: #064080;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.map-container .map {
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+.map-container .map svg {
+  height: 100% !important;
+  width: 100% !important;
+  stroke: #fff;
+  scale: 1.3;
+  transition: transform 0.3s ease;
+}
+.map-container .map svg path {
+  fill: #d7d7d7;
+  transition: all 0.3s ease-in;
+}
+.map-container .map svg .marker {
+  fill: #064080 !important;
+  fill-rule: nonzero;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  cursor: pointer;
+  width: 5px !important;
+  height: 5px !important;
+  animation: pulse 1s infinite alternate; /* Pulsing animation */
+}
+.map-container .map svg .member-active {
+  cursor: pointer;
+  fill: #fea501 !important;
+}
+.map-container .map svg .member-active:hover {
+  fill: #064080 !important;
+}
+.map-container .map svg .member-inactive {
+  cursor: pointer;
+  fill: #92d401 !important;
+}
+.map-container .map svg .member-inactive:hover {
+  fill: #064080 !important;
+}
+.map-container .description {
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+.map-container .description .ds {
+  display: flex;
+  align-items: flex-start;
+}
+.map-container .description .ds span {
+  width: 30px;
+  height: 20px;
+  background-color: #fea501;
+  margin-right: 10px;
+}
+.map-container .description .ds p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(46, 46, 46);
+  text-align: left;
+}
+.map-container .description .ds:last-of-type {
+  margin-left: 2em;
+}
+.map-container .description .ds:last-of-type span {
+  background-color: #92d401;
+}
+.map-container #popup {
+  display: none;
+  position: absolute;
+  background: #eff1e3;
+  z-index: 1000;
+  max-width: 40vw;
+  white-space: wrap;
+  padding: 15px;
+  border: 2px solid #064080;
+}
+.map-container #popup::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #064080 transparent transparent;
+}
+.map-container #popup h2 {
+  font-size: 16px;
+  color: #064080;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.map-container #popup p {
+  font-size: 13px;
+  color: #002147;
+  text-align: left;
+}/*# sourceMappingURL=style.css.map */
